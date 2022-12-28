@@ -1,1 +1,7 @@
-<p>secure-page works!</p>
+<h1>Books</h1>
+<button mat-button (click)="addBooks()">Add Books</button>
+<button mat-button (click)="deleteBooks()">Delete Books</button>
+
+<div *ngFor="let book of books">
+  {{book.author}}: {{book.name}}
+</div>
