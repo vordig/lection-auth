@@ -5,6 +5,7 @@
       <a mat-list-item routerLink="another-secure-page">Another Secure Page</a>
     </mat-nav-list>
     <mat-action-list>
+      <p>{{ authService.userName }}</p>
       <button mat-list-item (click)="authService.logout()">Logout</button>
     </mat-action-list>
   </mat-sidenav>

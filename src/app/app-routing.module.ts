@@ -5,6 +5,7 @@ import {AuthGuard} from "./auth/auth.guard";
 import {LoginComponent} from "./auth/login/login.component";
 import {NotAuthGuard} from "./auth/not-auth.guard";
 import {AnotherSecurePageComponent} from "./secured/another-secure-page/another-secure-page.component";
+import {RegisterComponent} from "./auth/register/register.component";
 
 const routes: Routes = [
   {
@@ -15,6 +16,11 @@ const routes: Routes = [
   {
     path: 'auth/login',
     component: LoginComponent,
+    canActivate: [NotAuthGuard]
+  },
+  {
+    path: 'auth/register',
+    component: RegisterComponent,
     canActivate: [NotAuthGuard]
   },
   {

@@ -15,13 +15,15 @@ import {MatListModule} from "@angular/material/list";
 import {AnotherSecurePageComponent} from './secured/another-secure-page/another-secure-page.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {JwtInterceptor} from "./interceptors/jwt.interceptor";
+import { RegisterComponent } from './auth/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SecurePageComponent,
     LoginComponent,
-    AnotherSecurePageComponent
+    AnotherSecurePageComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
